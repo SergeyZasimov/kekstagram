@@ -14,7 +14,7 @@ const createNameIndex = getRandomInteger(0, 6, false);
 
 const createMockComment = () => ({
   id: createCommentId(),
-  avatar: `img/avatar-${ createAvatarNumber() }`,
+  avatar: `img/avatar-${ createAvatarNumber() }.svg`,
   message: messages[createMessageIndex()],
   name: names[createNameIndex()]
 });
@@ -27,7 +27,7 @@ const createComments = () => {
 
 const createMockPhotos = () => ({
   id: createPhotoId(),
-  url: `photos/${ createPictureNumber() }`,
+  url: `./photos/${ createPictureNumber() }.jpg`,
   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid cumque ex, magnam placeat ratione?',
   likes: createLikes(),
   comments: createComments(),
