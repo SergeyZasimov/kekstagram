@@ -1,8 +1,9 @@
 import { createMockPhotos } from './create-mock.js';
-import { createUsersPhotos } from './create-users-photos.js';
+import Gallery from './gallery.js';
 
 const MOCK_NUMBERS = 25;
 
-const photos = Array.from({ length: MOCK_NUMBERS }, createMockPhotos);
+const pictures = Array.from({ length: MOCK_NUMBERS }, createMockPhotos);
 
-createUsersPhotos(photos);
+const gallery = new Gallery(pictures);
+gallery.renderGallery();
