@@ -19,4 +19,6 @@ const getRandomInteger = (a, b, unique = true) => {
 
 const checkLength = (string, length) => string.length <= length;
 
-export { getRandomInteger, checkLength };
+const isEscKey = (evt) => evt.key === 'Esc' || evt.key === 'Escape';
+
+export { getRandomInteger, checkLength, isEscKey };
